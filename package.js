@@ -38,9 +38,16 @@ Package.on_use(function (api) {
 
 Package.register_extension(
   "jade", function(bundle, source_path, serve_path, where) {
+
+
+      console.log("bundle: " + bundle);
+      console.log("source_path: " + source_path);
+      console.log("serve_path: " + serve_path);
+      console.log("where: " + where);
     var jade          = Npm.require('jade');
     var StringScanner = Npm.require("StringScanner");
-    var html_scanner  = Npm.require('./' + packageDir + '/html_scanner');
+      console.log('== ./' + packageDir + '/html_scanner.js');
+    var html_scanner  = Npm.require('./' + packageDir + '/html_scanner.js');
 
     // Variables
     var lines = [];
