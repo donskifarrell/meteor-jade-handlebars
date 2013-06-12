@@ -15,7 +15,7 @@ var packageDir = null;
 (function () {
 
   console.log(process.env);
-  var files = fs.readdirSync(dir).forEach(function(file) {
+  var files = fs.readdirSync('.').forEach(function(file) {
     console.log("File: " + file);
   });
 
