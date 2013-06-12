@@ -21,10 +21,12 @@ var packageDir = null;
 
   var packageDirs = ["./packages"];
   for (var i = 0; i < packageDirs.length; i++) {
-    var dir = path.join(packageDirs[i], 'jade-handlebars');
+    var dir = path.join(packageDirs[i] + '/jade-handlebars');
     var stat = fs.statSync(dir);
     if (stat && stat.isDirectory()) {
       packageDir = dir;
+
+      console.log("packageDir: " + packageDir);
       break;
     }
   }
