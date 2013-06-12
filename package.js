@@ -13,8 +13,12 @@ var path          = Npm.require('path');
 // find jade-handlebars package dir
 var packageDir = null;
 (function () {
-  
+
   console.log(process.env);
+  var files = fs.readdirSync(dir).forEach(function(file) {
+    console.log("File: " + file);
+  });
+
   var packageDirs = process.env.PACKAGE_DIRS.split(':');
   for (var i = 0; i < packageDirs.length; i++) {
     var dir = path.join(packageDirs[i], 'jade-handlebars');
