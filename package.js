@@ -38,7 +38,7 @@ Package.register_extension(
   "jade", function(bundle, source_path, serve_path, where) {
     var jade          = Npm.require('jade');
     var StringScanner = Npm.require("StringScanner");
-    var html_scanner  = Npm.require(path.join(packageDir, 'html_scanner'));
+    var html_scanner  = Npm.require(packageDir + '/html_scanner');
 
     // Variables
     var lines = [];
