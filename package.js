@@ -19,7 +19,7 @@ var packageDir = null;
     console.log("File: " + file);
   });
 
-  var packageDirs = process.env.PACKAGE_DIRS.split(':');
+  var packageDirs = ["./packages"];
   for (var i = 0; i < packageDirs.length; i++) {
     var dir = path.join(packageDirs[i], 'jade-handlebars');
     var stat = fs.statSync(dir);
