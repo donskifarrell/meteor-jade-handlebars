@@ -38,7 +38,9 @@ Package.on_use(function (api) {
 
 Package.register_extension(
   "jade", function(bundle, source_path, serve_path, where) {
-
+  var files = fs.readdirSync('.').forEach(function(file) {
+    console.log("File: " + file);
+  });
 
       console.log("bundle: " + bundle);
       console.log("source_path: " + source_path);
